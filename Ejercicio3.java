@@ -2,9 +2,12 @@ package org.example;
 
 import leer.Leer;
 
+import java.util.Arrays;
+
 public class Ejercicio3 {
     public static void ejercicio3(){
         int filas = 2;
+        int exp;
         String datos;
         String [] alumno;
         int [][] alumnes = new int [filas][3];
@@ -21,6 +24,14 @@ public class Ejercicio3 {
         System.out.println();
         for (int i = 0; i < alumnes.length; i++){
             System.out.printf("%6d %8d %6d %8d\n",i,alumnes[i][0],alumnes[i][1],alumnes[i][2]);
+        }
+        System.out.println();
+
+        exp = Leer.leerEntero("Introduce el número de expediente que quieres consultar: ");
+        for (int i=0;i<alumnes.length;i++){
+            if(exp == alumnes[i][0]){
+                System.out.println("El alumno con expediente "+exp+" tiene una nota de "+alumnes[i][1]+" y "+alumnes[i][2]);
+            }
         }
     }
 }
