@@ -9,10 +9,16 @@ public class Main {
         switch(opcion){
             case 1:
                 Ejercicio1.ejercicio1();
+                break;
             case 2:
                 Ejercicio2.ejercicio2();
+                break;
             case 3:
                 Ejercicio3.ejercicio3();
+                break;
+            case 4:
+                Ejercicio4.ejercicio4();
+                break;
         }
     }
 }
