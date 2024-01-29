@@ -11,7 +11,7 @@ public class Ejercicio1 {
             pares[i] = num;
             num +=2;
             }
-        for (int i = pares.length-1; i > pares.length-30 ;i--){
+        for (int i = pares.length-1; i >= pares.length-30 ;i--){
             System.out.print(pares[i]+" ");
             suma += pares[i];
             System.out.println();
