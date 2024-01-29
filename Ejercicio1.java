@@ -10,7 +10,10 @@ public class Ejercicio1 {
             pares[i] = num;
             num +=2;
             }
-        System.out.println(Arrays.toString(pares));
+        for (int i = pares.length-1; i > pares.length-30 ;i--){
+            System.out.print(pares[i]+" ");
+        }
+
         }
     }
 
