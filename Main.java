@@ -5,6 +5,7 @@ public class Main {
         System.out.println("1. Ejercicio 1");
         System.out.println("2. Ejercicio 2");
         System.out.println("3. Ejercicio 3");
+        System.out.println("4. Ejercicio 4");
         int opcion = Leer.leerEntero("Introduce una opción: ");
         switch(opcion){
             case 1:
