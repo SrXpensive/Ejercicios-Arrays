@@ -13,7 +13,7 @@ public class Ejercicio4 {
         double mediaTemp;
         double sumaHora = 0;
         double mediaHora;
-        double mediaTotal;
+        double mediaTotal = 0;
         double [][] temp = new double [30][4];
         do {
             dia = Leer.leerEntero("¿De qué día quieres introducir las temperaturas?: ");
@@ -34,6 +34,7 @@ public class Ejercicio4 {
             switch(opcion){
                 case 1:
                     dia = Leer.leerEntero("Introduce el día(1-30): ");
+                    sumaTemp=0;
                     for(int i = 0; i<temp[0].length; i++){
                         sumaTemp += temp[dia-1][i];
                     }
@@ -51,6 +52,7 @@ public class Ejercicio4 {
                     }else if(hora==18){
                         indice=3;
                     }
+                    sumaHora=0;
                     for(int i = 0; i< temp.length; i++){
                         sumaHora += temp[i][indice];
                     }
@@ -66,6 +68,7 @@ public class Ejercicio4 {
                     }
                     mediaTotal = sumaTotal/(30*4);
                     System.out.println("La media total del mes es: "+mediaTotal);
+                    break;
             }
         }while(opcion!=4);
     }
