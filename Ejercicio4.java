@@ -1,7 +1,5 @@
 package org.example;
 
-import leer.Leer;
-
 public class Ejercicio4 {
     public static void ejercicio4(){
         int horas;
