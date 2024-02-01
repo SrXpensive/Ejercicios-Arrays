@@ -12,9 +12,10 @@ public class Ejercicio4 {
         double sumaHora = 0;
         double mediaHora;
         double mediaTotal = 0;
+        double nuevaTemp;
         double [][] temp = new double [30][4];
         do {
-            dia = Leer.leerEntero("¿De qué día quieres introducir las temperaturas?: ");
+            dia = Leer.leerEntero("¿De qué día quieres introducir las temperaturas?(0 para dejar de introducir dias): ");
             if(dia!=0){
                 horas = 0;
                 for (int i = 0; i < temp[0].length; i++) {
@@ -29,7 +30,8 @@ public class Ejercicio4 {
             System.out.println("3. Temperatura media del mes");
             System.out.println("4. Temperatura de un dia y una hora en concreto");
             System.out.println("5. Temperatura mínima y máxima de un día");
-            System.out.println("6. Salir");
+            System.out.println("6. Cambiar la temperatura de un día y una hora");
+            System.out.println("7. Salir");
             opcion = Leer.leerEntero("Introduce una opción: ");
             switch(opcion){
                 case 1:
@@ -88,9 +90,38 @@ public class Ejercicio4 {
                     System.out.println("---------------");
                     break;
                 case 5:
+                    double min = 100;
+                    double max = -100;
                     dia = Leer.leerEntero("Introduce el día del cual quieres saber la temperatura mínima y máxima: ");
-                    
+                    for (int i = 0; i < temp[0].length; i++){
+                        if (temp[dia-1][i] > max){
+                            max = temp[dia-1][i];
+                        }
+                        if (temp[dia-1][i] < min){
+                            min = temp[dia-1][i];
+                        }
+                    }
+                    System.out.println("La temperatura mínima del día "+dia+" es "+min+" y la máxima es "+max);
+                    System.out.println("---------------");
+                    break;
+                case 6:
+                    dia = Leer.leerEntero("¿De qué día quieres cambiar la temperatura?: ");
+                    hora = Leer.leerEntero("¿Y de qué hora?: ");
+                    if(hora==0){
+                        indice=0;
+                    }else if(hora==6){
+                        indice=1;
+                    }else if(hora==12){
+                        indice=2;
+                    }else if(hora==18){
+                        indice=3;
+                    }
+                    nuevaTemp = Leer.leerEntero("Introduce la nueva temperatura: ");
+                    temp[dia-1][indice] = nuevaTemp;
+                    System.out.println("Ahora la temperatura del dia "+dia+" a las "+hora+" horas es "+temp[dia-1][indice]);
+                    System.out.println("---------------");
+                    break;
             }
-        }while(opcion!=6);
+        }while(opcion!=7);
     }
 }
