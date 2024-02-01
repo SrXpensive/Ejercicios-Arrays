@@ -2,7 +2,6 @@ package org.example;
 
 import leer.Leer;
 
-import java.util.Arrays;
 
 public class Ejercicio3 {
     public static void ejercicio3(){

@@ -29,7 +29,9 @@ public class Ejercicio4 {
             System.out.println("1. Temperatura media de un día elegido");
             System.out.println("2. Temperatura media de una hora del mes elegida");
             System.out.println("3. Temperatura media del mes");
-            System.out.println("4. Salir");
+            System.out.println("4. Temperatura de un dia y una hora en concreto");
+            System.out.println("5. Temperatura mínima y máxima de un día");
+            System.out.println("6. Salir");
             opcion = Leer.leerEntero("Introduce una opción: ");
             switch(opcion){
                 case 1:
@@ -40,6 +42,7 @@ public class Ejercicio4 {
                     }
                     mediaTemp = sumaTemp/4;
                     System.out.println("La media de temperaturas del dia "+dia+" es "+mediaTemp);
+                    System.out.println("---------------");
                     break;
                 case 2:
                     hora = Leer.leerEntero("Introduce la hora (0,6,12,18) de la que quieres obtener la media: ");
@@ -58,6 +61,7 @@ public class Ejercicio4 {
                     }
                     mediaHora = sumaHora/30;
                     System.out.println("La media de temperaturas a las "+hora+" es "+mediaHora);
+                    System.out.println("---------------");
                     break;
                 case 3:
                     double sumaTotal = 0;
@@ -68,8 +72,27 @@ public class Ejercicio4 {
                     }
                     mediaTotal = sumaTotal/(30*4);
                     System.out.println("La media total del mes es: "+mediaTotal);
+                    System.out.println("---------------");
                     break;
+                case 4:
+                    dia = Leer.leerEntero("Introduce el día que quieres consultar: ");
+                    hora = Leer.leerEntero("Introduce la hora del día (0,6,12,18): ");
+                    if(hora==0){
+                        indice=0;
+                    }else if(hora==6){
+                        indice=1;
+                    }else if(hora==12){
+                        indice=2;
+                    }else if(hora==18){
+                        indice=3;
+                    }
+                    System.out.println("La temperatura del dia "+dia+" a la hora "+hora+" fue "+temp[dia-1][indice]);
+                    System.out.println("---------------");
+                    break;
+                case 5:
+                    dia = Leer.leerEntero("Introduce el día del cual quieres saber la temperatura mínima y máxima: ");
+                    
             }
-        }while(opcion!=4);
+        }while(opcion!=6);
     }
 }
