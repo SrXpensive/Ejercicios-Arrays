@@ -1,7 +1,5 @@
 package org.example;
 
-import leer.Leer;
-
 import java.util.Arrays;
 
 public class Ejercicio2 {
