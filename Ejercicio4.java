@@ -91,7 +91,7 @@ public class Ejercicio4 {
                     break;
                 case 5:
                     dia = Leer.leerEntero("Introduce el día del cual quieres saber la temperatura mínima y máxima: ");
-                    
+
             }
         }while(opcion!=6);
     }
